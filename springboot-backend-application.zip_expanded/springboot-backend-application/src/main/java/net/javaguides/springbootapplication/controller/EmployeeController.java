@@ -20,7 +20,7 @@ import net.javaguides.springbootapplication.exception.ResourceNotFoundException;
 import net.javaguides.springbootapplication.model.Employee;
 import net.javaguides.springbootapplication.repository.EmployeeRepository;
 
-//@CrossOrigin(origins = "http://localhost:3001")
+//@CrossOrigin(origins = "http://localhost:3002")
 @RestController
 @RequestMapping("/api/v1/")
 public class EmployeeController {
@@ -63,7 +63,7 @@ public class EmployeeController {
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
-	// delete employee rest api
+	// delete employee rest api update
 	@DeleteMapping("/employees/{id}")
 	public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id){
 		Employee employee = employeeRepository.findById(id)
